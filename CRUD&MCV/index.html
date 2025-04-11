@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAJ Solutions</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <!--Itens da barra de navegação-->
+    <header class="header">
+        <a href="#" class="logo">IAJ Solutions</a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Início</a>
+            <a href="#MVC">MVC</a>
+            <a href="#CRUD">CRUD</a>
+        </nav>
+
+        <div class="bx bx-moon" id="darkMode-icon"></div>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+
+    <!--Início-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Seja bem-vindo!</h1>
+
+            <br>
+            <br>
+
+            <p>
+                Aqui, você encontra explicações claras e detalhadas. Explore conteúdos informativos e atualizados para
+                entender de forma simples e objetiva.
+            </p>
+
+            <br>
+
+            <p>Seja para aprender algo novo, esclarecer dúvidas ou aprofundar seus conhecimentos, você pode contar com
+                uma abordagem simples, objetiva e direta ao ponto — sem complicações, mas com profundidade.</p>
+
+            <br>
+            <br>
+            <br>
+
+            <a href="#MVC" class="btn">Começar</a>
+        </div>
+
+
+        <!-- Circulo rodando -->
+        <div class="profession-container">
+            <div class="profession-box">
+                <div class="profession" style="--i:0;">
+                    <i class='bx bx-home-alt'></i>
+                    <br>
+                    <h3>~ I n í c i o ~</h3>
+                </div>
+                <div class="profession" style="--i:1;">
+                    <i class='bx bx-transfer'></i>
+                    <br>
+                    <h3>~ M V C ~</h3>
+                </div>
+                <div class="profession" style="--i:2;">
+                    <i class='bx bx-wrench'></i>
+                    <br>
+                    <h3>~ C R U D ~</h3>
+                </div>
+
+                <div class="circle"></div>
+            </div>
+
+            <div class="overlay"></div>
+        </div>
+
+        <div class="home-img">
+            <img src="images/home.png" alt="">
+        </div>
+    </section>
+
+
+    <!-- Parte do MVC-->
+    <section class="about" id="MVC">
+        <div class="about-img">
+            <img src="images/about.png" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading"><span>MVC</span></h2>
+
+            <br>
+            <br>
+
+            <h3>Definição</h3>
+            <p>
+                É um tipo de Arquitetura de Software (modo como o código é organizado) que divide o projeto em camadas
+                definidas, sendo elas o Model (manipulação de dados), View (interação com o usuário) e Controller
+                (camada intermediária). É utilizado em aplicações mobile e web e em diferentes linguagens de programação
+                como: Java, JavaScript, C#, PHP e Ruby, e em alguns frameworks como o Laravel e Spring, por exemplo.
+
+            </p>
+
+            <br>
+
+            <h3>Fundamentos:</h3>
+
+            <br>
+            <br>
+
+            <h2>Model:</h2>
+            <p>
+                Acesso e manipulação dos dados da aplicação. Responsável pelo gerenciamento de dados e estado da
+                aplicação, realização de cálculos e operações de lógica, notificação de alterações ao Controller. É
+                geralmente associado a linguagens de programação orientada a objeto (estrutura em classes), porém pode
+                ser elaborado com outras estruturas como funções e objetos literais.
+            </p>
+
+            <h2>View:</h2>
+            <p>
+                Parte da interface do usuário, apresentando as informações e dados do Model de forma visual para que o
+                usuário entenda. Também faz a coleta de entrada do usuário e recebe a ação para a interação do Model por
+                meio do Controller.
+            </p>
+
+            <h2>Controller:</h2>
+            <p>
+                Camada de controle responsável por ligar o Model e a View, gerenciar o fluxo da aplicação e a
+                comunicação entre o Model e View (camada intermediária), receber a entrada do usuário pelo View e
+                traduzir em ações para o Model, controlar o fluxo da aplicação, determinando qual View deve ser exibida
+                e atualizar o View quando o Model muda e vice-versa.
+            </p>
+
+            <br>
+
+            <div class="text">
+                <div class="text-1">
+                    <div class="text-2-box mySwiper">
+                        <div class="testimonial-content swiper-wrapper">
+                            <div class="text-3-slide swiper-slide">
+                                <h3>Funcionamento</h3>
+                                <br>
+                                <img src="/img/funcionamento.png" alt="">
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+
+                <h2>Vantagens:</h2>
+                <br>
+                <p>
+                    <i class="bx bx-check-circle"></i> Maior segurança de informações;
+                </p>
+                <p>
+                    <i class='bx bx-check-circle'></i>
+                    Melhor manutenção do código;
+                </p>
+                <p>
+                    <i class='bx bx-check-circle'></i>
+                    Facilidade em identificar problemas;
+                </p>
+                <p>
+                    <i class='bx bx-check-circle'></i>
+                    Torna o trabalho em equipe mais prático e efetivo.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Exemplos do MVC -->
+    <div class="testimonial-container">
+        <h2 class="heading">Exemplos <span>MVC</span></h2>
+
+        <div class="testimonial-wrapper">
+            <div class="testimonial-box mySwiper">
+
+                <div class="testimonial-content swiper-wrapper">
+                    <div class="testimonial-slide swiper-slide">
+                        <h3>Model</h3>
+                        <img src="/img/20.png" alt="">
+                        <br>
+                        <br>
+                        <br>
+                        <img src="/img/21.png" alt="">
+                        <br>
+                        <br>
+                    </div>
+
+                    <div class="testimonial-slide swiper-slide">
+                        <h3>View</h3>
+                        <img src="/img/22.png" alt="">
+                        <br>
+                        <br>
+                    </div>
+
+                    <div class="testimonial-slide swiper-slide">
+                        <h3>Controller</h3>
+                        <img src="/img/23.png" alt="">
+                        <br>
+                        <br>
+                        <br>
+                        <img src="/img/24.png" alt="">
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Parte do CRUD -->
+    <section class="about" id="CRUD">
+        <div class="about-img">
+            <img src="images/about.png" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading"><span>CRUD</span></h2>
+
+            <br>
+            <br>
+
+            <h3>Definição</h3>
+            <p>
+                CRUD é um acrônimo que representa as operações básicas em bancos de dados: Create (Criar), Read (Ler),
+                Update (Atualizar) e Delete (Apagar). Essas operações são essenciais para manipular dados em sistemas de
+                banco de dados e são fundamentais para quem deseja entender programação e gerenciamento de dados.
+            </p>
+
+            <br>
+
+            <h3>O que é CRUD? </h3>
+            <p>
+                São quatro ações que formam o cerne da maioria dos softwares de banco de dados, permitindo aos usuários
+                criar registros novos, ler ou recuperar dados existentes, atualizar informações previamente armazenadas
+                e, finalmente, excluir registros quando necessário.
+            </p>
+            <p>
+                O conceito de CRUD surgiu com os primeiros sistemas de gerenciamento de banco de dados. À medida que
+                esses sistemas evoluíam, a necessidade de operações padrão para interagir com dados tornou-se tornou
+                evidente. O CRUD, portanto, representa essas operações essenciais, servindo como um framework básico
+                para a interação de dados em inúmeras aplicações, oferecendo um modelo simples e eficiente para a
+                manipulação de informações.
+            </p>
+
+            <br>
+
+            <h3>Fundamentos:</h3>
+
+            <br>
+            <br>
+
+            <h2>Criar/ Create (POST):</h2>
+            <p>
+                Os recursos são criados enviando solicitações HTTP POST para a API. O tipo de recurso é determinado pela
+                URL da solicitação. O corpo da solicitação deve conter um objeto JSON que descreve o recurso a ser
+                criado. O objeto no corpo da solicitação determina que o estado inicial do recurso será quando ele for
+                criado. Alguns recursos exigem que determinadas propriedades sejam fornecidas quando são criadas, outras
+                podem ser criadas com um objeto JSON vazio.
+            </p>
+            <p>
+                Em resumo, o POST é usado para criar recursos em um sistema, sendo importante fornecer as informações
+                necessárias no corpo da solicitação para garantir a criação correta do recurso e suas relações.
+            </p>
+
+
+            <h2>Leitura/ Read (GET):</h2>
+            <p>
+                A leitura de recursos em uma API é feita através de solicitações HTTP GET. Existem duas formas
+                principais de recuperar informações O primeiro método envolve a solicitação de uma lista de recursos, o
+                segundo método é quando um único recurso é solicitado. Essa função garante que os dados armazenados
+                possam ser recuperados e visualizados quando necessário.
+            </p>
+
+
+            <h2>Recuperação de múltiplos recursos:</h2>
+            <p>
+                Ocorre quando se solicita um ponto de extremidade sem especificar um recurso específico. Pode ser
+                necessário incluir parâmetros de consulta para obter dados relevantes.
+            </p>
+            <p>
+                Exemplo: Para listar aplicativos IIS, é preciso informar o site específico:
+                /api/webserver/webapps?website.id={website_id}.
+            </p>
+
+
+            <h2>Recuperação de um recurso específico </h2>
+            <p>
+                Acontece ao incluir a ID do recurso na URL do ponto de extremidade. Algumas APIs permitem o uso de
+                parâmetros de consulta em vez da ID na URL.
+            </p>
+            <p>
+                Exemplo para recuperar um arquivo:
+
+                Usando a ID: /api/files/{id}
+
+                Usando o caminho físico: /api/files?physical_path={caminho}
+
+                Isso permite flexibilidade na recuperação de dados, dependendo da estrutura da API.
+            </p>
+
+
+            <h2>Atualização/ Update (PATCH/PUT):</h2>
+            <p>
+                A atualização de dados em uma API pode ser feita através dos métodos PATCH e PUT, que servem para
+                modificar informações já existentes.
+            </p>
+            <p>
+                PATCH: Atualiza parcialmente um recurso, alterando apenas os campos informados.
+            </p>
+            <p>
+                PUT: Atualiza um recurso inteiro, substituindo os dados existentes.
+            </p>
+            <p>
+                Ambos são essenciais para manter a precisão das informações em sistemas e bancos de dados.
+            </p>
+
+
+            <h2>Excluir/ Delete (DELETE):</h2>
+            <p>
+                O método DELETE é utilizado para remover um recurso de um sistema. A exclusão de um recurso ocorre ao
+                enviar uma solicitação HTTP DELETE para a URL correspondente, que contém a ID do recurso. Essa operação
+                deve ser usada com cautela, pois, dependendo da implementação, os dados podem ser permanentemente
+                removidos e não recuperáveis.
+            </p>
+
+
+            <h2>CRUD em SQL</h2>
+            <p>
+                Para entender o CRUD no contexto do SQL, é vital conhecer como as operações são implementadas nesta
+                linguagem. No SQL, a função Create é realizada através do comando “INSERT INTO”, que adiciona novos
+                registros a uma tabela.
+            </p>
+            <p>
+                Read é feito usando “SELECT”, que recupera dados. “UPDATE” é usado para modificar registros existentes,
+                e “DELETE” remove registros de uma tabela. Esses comandos são a base para interagir com dados em
+                qualquer banco de dados SQL.
+            </p>
+
+
+            <h2>CRUD em Python </h2>
+            <p>
+                Em Python, o CRUD é aplicado frequentemente em combinação com bibliotecas como SQLAlchemy ou o módulo
+                sqlite3 para interagir com bancos de dados. Por exemplo, para criar dados, você pode usar métodos para
+                inserir objetos em uma tabela.
+            </p>
+            <p>
+                A leitura de dados é feita por meio de consultas, enquanto a atualização e a exclusão de dados são
+                realizadas por meio de comandos específicos que modificam ou removem os objetos correspondentes.
+            </p>
+
+            <br>
+
+            <div class="text">
+                <div class="text-1">
+                    <div class="text-2-box mySwiper">
+                        <div class="testimonial-content swiper-wrapper">
+                            <div class="text-3-slide swiper-slide">
+                                <h3>Exemplo</h3>
+                                <br>
+                                <img src="/img/logos.png" alt="">
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+
+                <!-- Exemplos do CRUD -->
+                <div class="testimonial-container">
+                    <h2 class="heading">Exemplos <span>CRUD</span></h2>
+
+                    <div class="testimonial-wrapper">
+                        <div class="testimonial-box mySwiper">
+
+                            <div class="testimonial-content swiper-wrapper">
+                                <div class="testimonial-slide swiper-slide">
+                                    <h3>Exemplo de Uso Delete (Apagar)</h3>
+                                    <h2>Excluir um usuário pelo ID:</h2>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <img src="/img/26.png" alt="">
+                                    <br>
+                                    <p>Isso removerá o usuário de ID 123 do sistema. </p>
+                                </div>
+                                <div class="testimonial-slide swiper-slide">
+                                    <h3>Exemplo de Uso Delete (Apagar)</h3>
+                                    <h2>Excluir um arquivo específico:</h2>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <img src="/img/27.png" alt="">
+                                    <br>
+                                    <p>O arquivo de ID 456 será apagado.</p>
+                                </div>
+
+
+                                <div class="testimonial-slide swiper-slide">
+                                    <h3>Exemplo de Uso Update (Atualizar) </h3>
+                                    <h2>Atualização Parcial com PATCH:</h2>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <img src="/img/28.png" alt="">
+                                    <br>
+                                    <p>Somente o nome será atualizado.</p>
+                                </div>
+                                <div class="testimonial-slide swiper-slide">
+                                    <h3>Exemplo de Uso Update (Atualizar) </h3>
+                                    <h2>Atualização Completa com PUT:</h2>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <img src="/img/29.png" alt="">
+                                    <br>
+                                    <p>Todos os campos são atualizados; qualquer omissão pode levar à perda de dados
+                                        antigos.</p>
+                                </div>
+
+
+                                <div class="testimonial-slide swiper-slide">
+                                    <h3>Exemplo de Uso Create (Criar)</h3>
+                                    <h2>Criando novo usuário:</h2>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <img src="/img/30.png" alt="">
+                                    <br>
+                                    <p>Isso adicionará um novo usuário ao sistema.</p>
+                                </div>
+                                <div class="testimonial-slide swiper-slide">
+                                    <h3>Exemplo de Uso Create (Criar)</h3>
+                                    <h2>Criando novo arquivo no sistema: </h2>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <img src="/img/31.png" alt="">
+                                    <br>
+                                    <p>Isso criará um novo arquivo dentro da pasta especificada.</p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+
+                <!-- footer -->
+                <footer class="footer">
+                    <div class="footer-text">
+                        <p>Copyright © 2023 | All Rights Reserved.</p>
+                    </div>
+
+                    <div class="footer-iconTop">
+                        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+                    </div>
+                </footer>
+
+</body>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="/seminario2/script.js"></script>
+
+</html>
