@@ -44,6 +44,6 @@ app.get("/", (req, res) => {
 
 //Criar Servidor
 //Configura para a porta 8080
-app.listen(8080, () => {
+app.listen(4000, () => {
     console.log("O servidor está rodando!")
 })

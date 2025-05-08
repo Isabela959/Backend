@@ -2,9 +2,10 @@
 const Sequelize = require ("sequelize");
 
 //Configura a conexão com o Database
-const connection = new Sequelize('guiapress', 'root', '1234', {
+const connection = new Sequelize('guiapressisa', 'root', '1234', {
     host: 'localhost', 
-    dialect: 'mysql'
+    dialect: 'mysql',
+    timezone: "-03:00"
 })
 
 //Exportar essa configuração para o index
