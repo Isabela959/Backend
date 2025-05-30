@@ -1,5 +1,5 @@
 <%- include("../../partials/header.ejs") %>
-    <%- include("../../partials/navbar.ejs") %>
+<%- include("../../partials/navbar.ejs") %>
 
         <div class="container mt-4">
             <h2>Lista de Artigos</h2>
@@ -16,7 +16,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% articles.forEach(article=> { %>
+                    <% articles.forEach(article => { %>
                         <tr>
                             <td><%= article.id %></td>
                             <td><%= article.title %></td>
@@ -25,13 +25,13 @@
                             <td>
                                 <a href="/admin/articles/edit/<%= article.id %>" class="btn btn-sm btn-warning">Editar</a>
                             
-                                <form method="POST" action="/categories/delete" style="display: inline;" onsubmit="confirmarDelecao(event, this)">
-                                    <input type="hidden" name="id" value="<%= categoria.id %>">
+                                <form method="POST" action="/articles/delete" style="display: inline;" onsubmit="confirmarDelecao(event, this)">
+                                    <input type="hidden" name="id" value="<%= article.id %>">
                                     <button class="btn btn-danger">Deletar</button>
                                 </form>
                             </td>
                         </tr>
-                        <% }) %>
+                    <% }) %>
                 </tbody>
             </table>
         </div>
@@ -42,7 +42,7 @@
     function confirmarDelecao(event, form) {
         event.preventDefault();
         var decision = confirm("Você quer deletar este artigo?")
-        if (decisiom) {
+        if (decision) {
             form.submit();
         }
     }

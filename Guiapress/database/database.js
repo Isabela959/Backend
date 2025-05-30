@@ -5,6 +5,7 @@ const Sequelize = require ("sequelize");
 const connection = new Sequelize('guiapressisa', 'root', '1234', {
     host: 'localhost', 
     dialect: 'mysql',
+//O banco registra o horário das alterações, por isso é preciso configurar o fuso horário para o nosso
     timezone: "-03:00"
 })
 

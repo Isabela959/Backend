@@ -19,7 +19,7 @@ const Article = connection.define('articles', {
         type: Sequelize.INTEGER,
         allowNull: false
     }
-})
+});
 
 Category.hasMany(Article);   // 1 categoria -> muitos artigos
 Article.belongsTo(Category); // 1 artigo -> 1 categoria
