@@ -1,0 +1,35 @@
+<%- include ("partials/header.ejs") %>
+    <%- include ("partials/navbar.ejs") %>
+
+        <body>
+            <div class="container">
+                <div class="jumbotron">
+                    <h1 class="display-4">Bem vindo!</h1>
+                    <p class="lead">Encontre o imóvel dos seus sonhos. Casas, apartamentos e terrenos com as melhores condições para
+                    compra ou aluguel.</p>
+                    <hr class="my-4">
+                    <p>Descubra imóveis que combinam com seu estilo e orçamento.
+                    </p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Leia mais</a>
+                </div>
+                <% imoveis.forEach(imovel=> { %>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>
+                                <%= imovel.title %>
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <a href="/<%= imovel.slug %>" class="btn btn-success">Ler artigos</a>
+
+                        </div>
+
+                    </div>
+
+                    <% }) %>
+            </div>
+
+
+            <%- include ("partials/footer.ejs") %>
+
+        </body>

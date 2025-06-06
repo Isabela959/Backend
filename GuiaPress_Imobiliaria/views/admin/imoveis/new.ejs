@@ -1,0 +1,47 @@
+<%- include ("../../partials/header.ejs") %>
+<%- include ("../../partials/navbar.ejs") %>
+
+        <div class="container">
+            <hr>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Novo Imóvel</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="/imoveis/save">
+                        <label for="titulo">Título</label>
+                        <input class="form-control"  type="text" name="title" placeholder="Título do Anúncio do Imóvel"><br>
+                        <label for="descricao">Descrição</label>
+                        <textarea class="form-control" name="descricao" id="descricao" placeholder="Descreva o Imóvel aqui"></textarea><br>
+                        <label for="preco">Preço</label>
+                        <input class="form-control" type="text" name="preco" placeholder="Preço do Imóvel"><br>
+                        <label for="quartos">Quantidade de Quartos</label>
+                        <input class="form-control" type="text" name="quartos" placeholder="Digite a Quantidade de Quartos do Imóvel"><br>
+                        <label for="endereco">Endereço</label>
+                        <input class="form-control" type="text" name="endereco" placeholder="Digite o endereço do Imóvel"><br>
+
+                        <label>Categoria</label>
+                        <select name="category" class="form-control">
+                            <% categories.forEach((category) => { %>
+                                <option value="<%= category.id %>"><%= category.title %></option>
+                            <% }) %>
+                        </select><br>
+
+                        <button class="btn btn-success">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+<%- include ("../../partials/footer.ejs") %>
+
+<script src="/tinymce/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+            selector: "#descricao",
+            plugins: 'advlist autolink image lists print preview hr searchreplace wordcount fullscreen insertdatetime media save table paste emoticons',
+            toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | emoticons',
+            license_key: 'gpl' // para evitar o aviso de avaliação
+        });
+</script>
+
