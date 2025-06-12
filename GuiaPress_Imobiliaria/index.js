@@ -2,6 +2,7 @@ const express = require ("express");
 const app = express();
 const bodyParser = require("body-parser");
 const connection = require("./database/database");
+const slugify = require("slugify");
 
 const Category = require("./categories/Category");
 const Imovel = require("./imoveis/Imovel");
@@ -29,6 +30,11 @@ connection
     }).catch((error) => {
         console.log(error);
     })
+    
+Category.sync({ force: false }).then(() => {
+        Imovel.sync({ force: false });
+      });
+
 
 app.use("/", categoriesController);
 app.use("/", imoveisController);
@@ -61,6 +67,7 @@ app.get("/:slug", (req,res) => {
         res.redirect("/");
     });
 })
+
 app.listen(4001, () => {
     console.log("o servidor está rodando")
 })

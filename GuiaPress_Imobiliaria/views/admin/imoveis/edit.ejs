@@ -5,15 +5,26 @@
             <hr>
             <div class="card">
                 <div class="card-header">
-                    <h2>Editar Artigo</h2>
+                    <h2>Editar Imóvel</h2>
                 </div>
-                <div class="card-body"></div>
-                <form method="POST" action="/imoveis/update">
+                <div class="card-body">
+                <form method="POST" action="/imoveis/save">
                     <input type="hidden" name="id" value="<%= imovel.id %>">
 
-                    <input class="form-control" type="text" name="title" placeholder="Defina o título do artigo"value="<%= imovel.title %>"><br>
+                    <label for="title">Título</label>
+                    <input class="form-control" type="text" name="title" placeholder="Defina o título do imóvel"value="<%= imovel.title %>"><br>
                     
-                    <textarea name="form-control" name="body" id="imovel" placeholder="Escreva o conteúdo aqui!"><%= imovel.body %></textarea><br>
+                    <label for="descricao">Descrição</label>
+                    <textarea class="form-control" name="descricao" id="imovel" placeholder="Descreva o imóvel aqui!"><%= imovel.descricao %></textarea><br>
+
+                    <label for="preco">Preço</label>
+                    <input class="form-control" type="text" name="preco" placeholder="Defina o preço do imóvel" value="<%= imovel.preco %>"><br>
+                    
+                    <label for="quartos">Quantidade de Quartos</label>
+                    <input class="form-control" type="text" name="quartos" placeholder="Defina a quantidade de quartos do imóvel" value="<%= imovel.quartos %>"><br>
+                    
+                    <label for="endereco">Endereço</label>
+                    <input class="form-control" type="text" name="endereco" placeholder="Digite o endereço do imóvel" value="<%= imovel.endereco %>"><br>
 
                     <label>Categoria</label>
                     <select name="category" class="form-control">
@@ -28,9 +39,10 @@
             </div>
         </div>
     </div>
+</div>
     
     <div id="content_for_tinymce" style="display: none;">
-        <%- imovel.body %>
+        <%- imovel.descricao %>
     </div>
 
         <%- include ("../../partials/footer.ejs") %>

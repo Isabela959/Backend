@@ -2,7 +2,7 @@
 const Sequelize = require ("sequelize");
 
 //Configura a conexão com o Database
-const connection = new Sequelize('imobiliariaisa', 'root', '1234', {
+const connection = new Sequelize('imobiliaria2', 'root', '1234', {
     host: 'localhost', 
     dialect: 'mysql',
 //O banco registra o horário das alterações, por isso é preciso configurar o fuso horário para o nosso

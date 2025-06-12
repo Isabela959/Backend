@@ -28,22 +28,32 @@ router.get("/admin/imoveis/new", (req, res) => {
 
 // Salvar ou atualizar imóvel
 router.post("/imoveis/save", (req, res) => {
-    const { id, title, body, category } = req.body;
+    console.log("Recebeu POST imoveis/save", req.body);
+    const { id, title, descricao, preco, quartos, endereco, category } = req.body;
 
-    if (!title || !body || !category) {
-        return res.redirect("/admin/imoveis");
+    if (!title || !descricao || !preco || !quartos || !endereco || !category) {
+        return res.redirect("/admin/imoveis/new");
     }
+
+    // Converte o valor com vírgula e texto para decimal
+    let precoConvertido = preco
+    .replace("R$", "")
+    .replace(/\./g, "")
+    .replace(",", ".")
+    .trim();
+
+let precoFinal = parseFloat(precoConvertido);
 
     if (id) {
         // Atualizar imóvel existente
         Imovel.update({
             title: title,
             slug: slugify(title),
-            body: body,
-            categoryId: category,
-            preco: preco,
+            descricao: descricao,
+            preco: precoFinal,
             quartos: quartos,
-            endereco: endereco
+            endereco: endereco,
+            categoryId: category,
         }, {
             where: { id: id }
         }).then(() => {
@@ -58,10 +68,10 @@ router.post("/imoveis/save", (req, res) => {
             title: title,
             slug: slugify(title),
             descricao: descricao,
-            categoryId: category,
-            preco: preco,
+            preco: precoFinal,
             quartos: quartos,
-            endereco: endereco
+            endereco: endereco,
+            categoryId: category,
         }).then(() => {
             res.redirect("/admin/imoveis");
         }).catch(err => {
