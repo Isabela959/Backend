@@ -26,7 +26,7 @@ export class TasksController {
 
   @Get(':id')
   findOne(@Param('id') id: string): any {
-    const tasks = this.tasksService.findOne(parseInt(id, 10));
+    const tasks = this.tasksService.findOne(id);
     if (!tasks) {
       throw new NotFoundException(`Produto com ID ${id} não encontrado.`);
     }
@@ -34,13 +34,13 @@ export class TasksController {
   }
 
   @Post()
-  create(@Body() createTasksDto: CreateTaskDto): any {
-    return this.tasksService.createTask(createTasksDto);
+  createTask(@Body() createTasksDto: CreateTaskDto): any {
+    return this.tasksService.createTask(createTasksDto.title, createTasksDto.description);
   }
 
   @Put(':id')
   update(@Param('id') id: string, @Body() updateTasksDto: UpdateTaskDto): any {
-    const tasks = this.tasksService.update(id);
+    const tasks = this.tasksService.update(id, updateTasksDto);
     if (!tasks) {
       throw new NotFoundException(
         `Produto com ID ${id} não encontrado para atualizar.`,
@@ -51,7 +51,7 @@ export class TasksController {
 
   @Delete(':id')
   remove(@Param('id') id: string): any {
-    const removed = this.tasksService.remove(parseInt(id, 10));
+    const removed = this.tasksService.remove(id);
     if (!removed) {
       throw new NotFoundException(
         `Produto com ID ${id} não encontrado para remover.`,
