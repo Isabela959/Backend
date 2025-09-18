@@ -1,29 +1,16 @@
-import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Param,
-  Put,
-  Delete,
-  HttpCode,
-  HttpStatus,
-  UseGuards,
-  Query,
-  DefaultValuePipe,
-  ParseIntPipe,
-} from '@nestjs/common';
+// src/products/products.controller.ts
+import { Controller, Get, Post, Body, Param, Put, Delete, HttpCode, HttpStatus, UseGuards, Query, DefaultValuePipe, ParseIntPipe } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { ProductsService } from './products.service';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
+import { ProductEntity } from './entities/product.entity';
 import { Roles } from '../auth/decorators/roles.decorator';
 import { Role } from '../common/enums/role.enum';
 import { RolesGuard } from '../auth/guards/roles.guard';
 import { GetUser } from '../auth/decorators/get-user.decorator';
 import type { UserPayload } from '../auth/interfaces/user-payload.interface';
-import { PaginationResponseDto } from 'src/common/dto/pagination-response.dto';
-import { ProductEntity } from './entities/product.entity';
+import { PaginationResponseDto } from '../common/dto/pagination-response.dto'; // Importa o DTO de paginação
 
 @Controller('products')
 @UseGuards(AuthGuard('jwt'))
@@ -42,8 +29,7 @@ export class ProductsController {
   async findAll(
     @Query('page', new DefaultValuePipe(1), ParseIntPipe) page: number,
     @Query('limit', new DefaultValuePipe(10), ParseIntPipe) limit: number,
-  ): Promise<PaginationResponseDto<ProductEntity>> {
-    // Usa o DTO como tipo de retorno
+  ): Promise<PaginationResponseDto<ProductEntity>> { // Usa o DTO como tipo de retorno
     return await this.productsService.findAll({ page, limit });
   }
 

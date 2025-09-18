@@ -7,12 +7,11 @@ async function bootstrap() {
 
   // Habilita o CORS para que seu front-end possa acessar a API
   app.enableCors({
-    origin: 'http://localhost:5173', // A URL do seu front-end (Vite usa 5173 por padrão)
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    origin: 'http://localhost:3000', // A URL do seu front-end (Vite usa 5173 por padrão)
     credentials: true,
   });
 
   app.useGlobalPipes(new ValidationPipe());
-  await app.listen(process.env.PORT ?? 3000);
+  await app.listen(process.env.PORT ?? 3001);
 }
 bootstrap();
